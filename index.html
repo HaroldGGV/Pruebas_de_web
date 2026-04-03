@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mi Prueba de Git</title>
-</head>
-<body>
-    <h1>¡Hola! Estoy probando Git y GitHub</h1>
-    <p>Este es mi primer cambio de código.</p>
-</body>
-</html>
+<h1>¿HOLA QUIERES SABER SI REALMENTE ERES UN VERDADERO HOMBRE?</h1>
+<img
+  src="https://i.scdn.co/image/ab67616d0000b273058cef855b9270278a29ab4c"
+  width="300"
+/>
+
+<h2>Elige buen amigo</h2>
+
+<div class="opciones-container">
+  <label>
+    <input type="checkbox" class="check-broma" name="opcion_si" /> Sí
+  </label>
+
+  <label style="margin-left: 20px">
+    <input type="checkbox" class="check-broma" name="opcion_no" /> No
+  </label>
+</div>
+
+<div id="broma" style="display: none; margin-top: 20px">
+  <p><strong>¡Usted es maricón, jaaj!</strong></p>
+  <img
+    src="https://ih1.redbubble.net/image.3436947309.1648/raf,360x360,075,t,fafafa:ca443f4786.jpg"
+    alt="Broma"
+    width="200"
+  />
+</div>
+
+<script>
+  // Seleccionamos todas las casillas que tengan la clase "check-broma"
+  const casillas = document.querySelectorAll(".check-broma");
+  const seccionBroma = document.getElementById("broma");
+
+  // Recorremos cada casilla para decirle qué hacer
+  casillas.forEach((casilla) => {
+    casilla.addEventListener("change", function () {
+      if (this.checked) {
+        // Si marcas CUALQUIERA de las dos, aparece la broma
+        seccionBroma.style.display = "block";
+      } else {
+        // Si la desmarcas, se oculta (opcional)
+        seccionBroma.style.display = "none";
+      }
+    });
+  });
+</script>
